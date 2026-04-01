@@ -3,32 +3,64 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="@dimen/product_search_container_padding"
-    android:paddingBottom="@dimen/product_search_container_padding">
+    android:background="@color/slate_50">
 
-    <ImageView
-        android:id="@+id/iv_query_image"
+    <!-- Custom Header -->
+    <View
+        android:id="@+id/headerBg"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/product_search_image_height"
-        android:contentDescription="@null"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="64dp"
+        android:background="@color/primary_brand"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btnSearch"
+    <TextView
+        android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/product_search_container_padding"
+        android:text="Search Results"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/headerBg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/headerBg" />
+
+    <!-- Query Image Hero Card -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardQuery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="@dimen/card_corner_radius"
+        app:cardElevation="@dimen/card_elevation"
+        app:layout_constraintTop_toBottomOf="@id/headerBg">
+
+        <ImageView
+            android:id="@+id/iv_query_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/product_search_image_height"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSearch"
+        style="@style/Widget.App.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:paddingHorizontal="32dp"
         android:text="@string/button_search_product"
-        app:layout_constraintEnd_toEndOf="@+id/iv_query_image"
-        app:layout_constraintStart_toStartOf="@+id/iv_query_image"
-        app:layout_constraintTop_toBottomOf="@id/iv_query_image" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardQuery" />
 
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="@dimen/product_search_progress_size"
         android:layout_height="@dimen/product_search_progress_size"
+        android:indeterminateTint="@color/primary_brand"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/btnSearch"
         app:layout_constraintEnd_toStartOf="@+id/btnSearch"
@@ -37,11 +69,14 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="@dimen/product_search_container_padding"
+        android:layout_marginTop="16dp"
+        android:clipToPadding="false"
+        android:paddingHorizontal="12dp"
+        android:paddingBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnSearch" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+

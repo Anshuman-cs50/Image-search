@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="item_product_height">120dp</dimen>
-    <dimen name="image_product_size">100dp</dimen>
-    <dimen name="item_product_padding">8dp</dimen>
-    <dimen name="text_product_margin">8dp</dimen>
-    <dimen name="product_search_image_height">150dp</dimen>
-    <dimen name="product_search_container_padding">8dp</dimen>
-    <dimen name="product_search_progress_size">40dp</dimen>
-    <dimen name="object_detector_button_width">150dp</dimen>
-    <dimen name="object_detector_button_padding">10dp</dimen>
-    <dimen name="object_detector_view_margin">14dp</dimen>
-    <dimen name="object_detector_text_size">16sp</dimen>
+    <!-- Card & Shape Tokens -->
+    <dimen name="card_corner_radius">12dp</dimen>
+    <dimen name="card_elevation">4dp</dimen>
+    <dimen name="button_corner_radius">24dp</dimen>
+
+    <!-- Product Item -->
+    <dimen name="item_product_height">130dp</dimen>
+    <dimen name="image_product_size">110dp</dimen>
+    <dimen name="item_product_padding">12dp</dimen>
+    <dimen name="text_product_margin">12dp</dimen>
+
+    <!-- Product Search Screen -->
+    <dimen name="product_search_image_height">200dp</dimen>
+    <dimen name="product_search_container_padding">16dp</dimen>
+    <dimen name="product_search_progress_size">48dp</dimen>
+
+    <!-- Home/Detection Screen -->
+    <dimen name="object_detector_button_width">160dp</dimen>
+    <dimen name="object_detector_button_padding">12dp</dimen>
+    <dimen name="object_detector_view_margin">16dp</dimen>
+    <dimen name="object_detector_text_size">18sp</dimen>
 </resources>
