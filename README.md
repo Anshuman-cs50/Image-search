@@ -1,6 +1,6 @@
 # Product Image Search (ML Kit Edition)
 
-An Android application that **implements** Google's ML Kit Object Detection API to identify products in images and prepare them for a visual search experience.
+An Android application that implements **Google's ML Kit Object Detection API** to identify products in images and prepare them for a visual search experience.
 
 ## 🚀 Features
 
@@ -39,4 +39,4 @@ An Android application that **implements** Google's ML Kit Object Detection API 
 
 ---
 *Created as part of the Google Codelabs series on Machine Learning.*
-
+
